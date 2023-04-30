@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+*{
+    margin: 0;  padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+}
+
+
+body{
+    background-color: #ffe2c8;
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.container{
+    width: 450px;
+    background-color: aliceblue;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+    border-radius: 8px;
+}
+.container h1{
+    font-weight: 600;
+    font-size: 2rem;
+    padding: 1rem 1.75rem;
+    border-bottom: 1px solid #d4dbe5;
+}
+
+.wrapper{       margin: 1.25rem 1.75rem;    }
+.wrapper .input-box{      position: relative;      }
+
+.input-box input{
+    width: 100%;
+    height: 53px;
+    color: #000;
+    background: none;
+    font-size: 1.06rem;
+    font-weight: 500;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    letter-spacing: 2px;
+    padding: 0 2.85rem 0 1rem;
+}
+.input-box span{
+    position: absolute;
+    right: 13px;
+    line-height: 53px;
+    color: #707070;
+    cursor: pointer;
+}
+.input-box span:hover{      color: green !important;    }
+
+.wrapper .pass-indicator{
+    width: 100%;
+    height: 4px;
+    position: relative;
+    margin-top: .75rem;
+    border-radius: 25px;
+}
+
+.pass-indicator::before{
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    transition: width .3s ease;
+}
+.pass-indicator#weak::before{
+    width: 20%;
+    background: #e64a4a;
+}
+.pass-indicator#medium::before{
+    width: 50%;
+    background: #f1c80b;
+}
+.pass-indicator#strong::before{
+    width: 100%;
+    background: #43a047;
+}
+
+
+.pass-length{
+    margin: 1.56rem 0 1.25rem;
+}
+.pass-length .details{
+    display: flex;
+    justify-content: space-between;
+}
+.pass-length input{
+    width: 100%;
+    height: 6px;
+}
+
+.pass-settings .options{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.pass-settings .options .option{
+    display: flex;
+    width: calc(100% / 2);
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.options .option:first-child{       pointer-events: none;       }
+.options .option:first-child input{     opacity: .7;      }
+
+.options .option input{
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.options .option label{
+    color: #4f4f4f;
+    padding-left: .63em;
+    cursor: pointer;
+}
+
+.wrapper .btn-generate{
+    width: 100%;
+    margin: .94rem 0 1.3rem;
+    padding: .94rem 0;
+    font-size: 1.06rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #ffb901;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.wrapper .btn-generate:hover{     opacity: .8;        }
